@@ -9,6 +9,7 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
+import Foods from './pages/foods';
 
 function App() {
 	return (
@@ -26,7 +27,7 @@ function App() {
 						</PrivateRoute>
 					}
 				/>
-
+<Route path="/foods" element={ <Foods />} />
 				<Route
 					exact
 					path="/projects/:id"
