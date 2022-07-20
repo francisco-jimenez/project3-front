@@ -20,7 +20,7 @@ return(
             <h3>{food.name}</h3>
             <Link to={`/food/${food._id}`} > <img height='100px' src={food.image}/> </Link>
             <h4>{food.type}</h4>
-            <h5>{food.restaurant}</h5>
+            <a target="_blank" href={food.link}>{food.restaurant}</a>
 
 
 
