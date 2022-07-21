@@ -2,6 +2,9 @@ import TinderCard from 'react-tinder-card'
 import Food from './Food'
 import { useState,useEffect } from "react"
 import service from '../services/service';
+import logo from "../MatchEatLogo.png";
+
+
 // ...
 
 function Tinder (){
@@ -21,18 +24,24 @@ const onCardLeftScreen = (myIdentifier) => {
     
   
       return (
-        <div style={{border: "3px black solid", width: "40%", margin: "auto", overflow: "hidden"}}>
-            
-            {foodList.map((food) => (
-            <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['down']}>
-            <Food {...food}/>
+        <div>
+          <div>
+            <img style={{width:"400px"}} src={logo} alt="#" />
+          </div>
+          <div style={{border: "3px black solid", width: "40%", margin: "auto", overflow: "hidden", height: "270px"}}>
+           
+           {foodList.map((food) => (
+           <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['down']}>
+           <Food {...food}/>
 
-          
-            </TinderCard>
-        ))}
+         
+           </TinderCard>
+       ))}
 
-        
+       
+       </div>
         </div>
+        
       ) 
 }
 

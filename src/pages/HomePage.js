@@ -1,7 +1,10 @@
+import logo from "../MatchEatLogo.png";
+
 function HomePage() {
   return (
     <div>
-      <h1>Match Eat</h1>
+
+      <img style={{width:"400px"}} src={logo} alt="#" />
     </div>
   );
 }
