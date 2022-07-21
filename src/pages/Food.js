@@ -16,7 +16,7 @@ function Food({
 return(
     <div>
            
-        <h1>Comidillas Guenas </h1>
+       <div> <h1>Dale Love a tu comida:</h1></div>
         
             <div key={_id}>
             <h3>{name}</h3>
