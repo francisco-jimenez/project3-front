@@ -107,3 +107,13 @@ nav li {
 .TaskCard {
   background-color: #dfeef9;
 }
+.LoginPage {
+  border-radius: 20px;
+  margin-top: -40px;
+  margin-top: 2em;
+  padding-top: -30;
+  font-size: 1.7rem;
+  color: #502435;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

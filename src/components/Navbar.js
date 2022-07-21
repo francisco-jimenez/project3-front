@@ -9,14 +9,17 @@ function Navbar() {
 
   return (
     <nav>
-      <Link to="/">
+      <Link to="/" className="menu-bars">
         <button>Home</button>
       </Link>
 -
       {isLoggedIn
         ? (<>
             <Link to="/projects">
-              <button>Food</button>
+              <button>projects</button>
+            </Link>
+            <Link to="/foods">
+              <button>Foods</button>
             </Link>
             <button onClick={logOutUser}>Logout</button>
             <span>{user.name}</span>
