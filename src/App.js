@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
 import Foods from './pages/foods';
+import Tinder from './pages/MatchPage'
 
 function App() {
 	return (
@@ -17,7 +18,8 @@ function App() {
 			<Navbar />
 
 			<Routes>
-				<Route exact path="/" component={HomePage} />
+				<Route exact path="/" element={<HomePage />} />
+				<Route exact path="/tinder" element={<Tinder />} />
 				<Route
 					exact
 					path="/projects"
