@@ -9,8 +9,8 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
-import Foods from './pages/foods';
-import Tinder from './pages/MatchPage'
+import Food from './pages/Food';
+import Tinder from './pages/Tinder'
 
 function App() {
 	return (
@@ -29,7 +29,7 @@ function App() {
 						</PrivateRoute>
 					}
 				/>
-<Route path="/foods" element={ <Foods />} />
+<Route path="/foods" element={ <Food/>} />
 				<Route
 					exact
 					path="/projects/:id"
