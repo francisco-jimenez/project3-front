@@ -17,11 +17,10 @@ service.get(`/projects`)
 },[]);
 
 const onSwipe = (direction, food) => {
-  service.post("/foods/favorites/userIDFake/foodIDFake")
+  service.post(`/foods/favorites/${food._id}`, {prueba : "prueba"})
   console.log('You swiped: ' + direction)
   console.log('´Has hecho swipe de:')
-  console.log( food.name)
-  
+
   if(direction === "right"){
     favorites.push(food)
    
