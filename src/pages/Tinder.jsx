@@ -17,7 +17,7 @@ service.get(`/projects`)
 },[]);
 
 const onSwipe = (direction, food) => {
-  service.post(`/foods/favorites/${food._id}`, {prueba : "prueba"})
+  service.post(`/foods/favorites/${food._id}`)
   console.log('You swiped: ' + direction)
   console.log('´Has hecho swipe de:')
 
