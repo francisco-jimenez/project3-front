@@ -5,6 +5,7 @@ import service from '../services/service';
 import logo from "../MatchEatLogo.png";
 
 
+
 // ...
 
 function Tinder (){
@@ -14,13 +15,26 @@ service.get(`/projects`)
 .then(res=>{setFoodList(res.data)})
 },[]);
 
-const onSwipe = (direction) => {
+const onSwipe = (direction, food) => {
+  service.post("/foods/favorites/userIDFake/foodIDFake")
   console.log('You swiped: ' + direction)
+  console.log('´Has hecho swipe de:')
+  console.log( food.name)
+  //Si direction === right
+    //Meto la cmida en array vacio  DE USE CONTENT (tengo todos los datos)
+    //Salvo a favoritos en BBDD?
+
+
+    //Este evento debe llamar a un endpoint POST /favorites/:îdUser/:idFood
+    //1. Crea este endpoint disponible en back
+      //El endpoint debe:^
+      //Hacer User.findByIdAndUpdate
+      //Usando el id del user y haciendo un $push de mongoose a user.favorites con el el id de la comida
+
+
 }
 
-const onCardLeftScreen = (myIdentifier) => {
-  console.log(myIdentifier + ' left the screen')
-}
+
     
   
       return (
@@ -31,7 +45,7 @@ const onCardLeftScreen = (myIdentifier) => {
           <div style={{border: "3px black solid", width: "40%", margin: "auto", overflow: "hidden", height: "270px"}}>
            
            {foodList.map((food) => (
-           <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['down']}>
+           <TinderCard onSwipe= {(direction) => onSwipe(direction, food) } preventSwipe={['down']}>
            <Food {...food}/>
 
          
