@@ -10,6 +10,7 @@ import logo from "../MatchEatLogo.png";
 
 function Tinder (){
   const [foodList,setFoodList]= useState([]);
+  const [favorites, setFavorites]= useState([])
 useEffect(()=>{
 service.get(`/projects`)
 .then(res=>{setFoodList(res.data)})
@@ -20,12 +21,12 @@ const onSwipe = (direction, food) => {
   console.log('You swiped: ' + direction)
   console.log('´Has hecho swipe de:')
   console.log( food.name)
-  let favorites = []
+  
   if(direction === "right"){
-    favorites.push(food.length)
+    favorites.push(food)
    
   }
-  console.log(favorites.length)
+  console.log(favorites)
   
   //Si direction === right
     //Meto la cmida en array vacio  DE USE CONTENT (tengo todos los datos)
