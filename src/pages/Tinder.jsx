@@ -20,6 +20,13 @@ const onSwipe = (direction, food) => {
   console.log('You swiped: ' + direction)
   console.log('´Has hecho swipe de:')
   console.log( food.name)
+  let favorites = []
+  if(direction === "right"){
+    favorites.push(food.length)
+   
+  }
+  console.log(favorites.length)
+  
   //Si direction === right
     //Meto la cmida en array vacio  DE USE CONTENT (tengo todos los datos)
     //Salvo a favoritos en BBDD?
