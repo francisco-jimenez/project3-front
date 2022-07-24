@@ -18,8 +18,8 @@ function Navbar() {
             <Link to="/projects">
               <button>projects</button>
             </Link>
-            <Link to="/foods">
-              <button>Foods</button>
+            <Link to="/favorites">
+              <button>Favorites</button>
             </Link>
             <button onClick={logOutUser}>Logout</button>
             <span>{user.name}</span>
