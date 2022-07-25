@@ -18,7 +18,7 @@ function Favorites(){
 return(
     <div>
            
-        <h1>Favorites:</h1>
+        <h1>Favoritess:</h1>
         {favorites.map((favorite) => 
              <div key={favorite._id}>
              <h3>{favorite.name}</h3>
