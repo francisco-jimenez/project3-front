@@ -12,7 +12,14 @@ function Favorites(){
         .catch((err) => console.log(err))
     }, [])
 
-    console.log(favorites)
+    function deleteFavorite(favoriteId) {
+        const filteredfavorites = favorites.filter((favorite) => {
+         return favorite._id !== favoriteId;
+            });
+            
+        setFavorites(filteredfavorites);
+    };
+
 
 
 return(
@@ -25,7 +32,13 @@ return(
              <img height='100px' src={favorite.image}/> 
              <h4>{favorite.type}</h4>
              <a target="_blank" href={favorite.link}>{favorite.restaurant}</a>
+             <br></br>
+             <button onClick={() => deleteFavorite(favorite._id)} className="btn btn-danger">
+            Delete <span style= {{color: "black"}}>🗑️</span>
+                </button>
+
              </div>
+             
         )}
             
     
