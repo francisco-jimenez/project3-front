@@ -16,9 +16,10 @@ function Navbar() {
     <img style={{width:"14rem"}} src={logo} alt="#" />
     </Link>
   
--
+
       {isLoggedIn
         ? (<>
+        <div class="nav.links">
             <Link to="/tinder">
               <button>Haz swipe!</button>
             </Link>
@@ -27,11 +28,14 @@ function Navbar() {
             </Link>
             <button onClick={logOutUser}>Logout</button>
             <span>{user.name}</span>
+            </div>
           </>)
         : 
         (<>
+          <div class="signup">
           <Link to="/signup"> <button>Signup</button> </Link>
           <Link to="/login"> <button>Login</button> </Link>
+          </div>
         </>)
       }
     </nav>

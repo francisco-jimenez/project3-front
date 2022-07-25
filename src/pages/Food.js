@@ -24,7 +24,7 @@ return(
             <h4>{type}</h4>
             <a target="_blank" href={link}>{restaurant}</a>
 
-
+    
 
             </div>
             
