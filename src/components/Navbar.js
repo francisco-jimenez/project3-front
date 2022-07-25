@@ -12,18 +12,18 @@ function Navbar() {
   return (
     <div class="navbar">
     <nav >
+    <Link to="/">
     <img style={{width:"14rem"}} src={logo} alt="#" />
-      <Link to="/" className="menu-bars">
-        <button>Home</button>
-      </Link>
+    </Link>
+  
 -
       {isLoggedIn
         ? (<>
-            <Link to="/projects">
-              <button>projects</button>
+            <Link to="/tinder">
+              <button>Haz swipe!</button>
             </Link>
             <Link to="/favorites">
-              <button>Favorites</button>
+              <button>Tus Match</button>
             </Link>
             <button onClick={logOutUser}>Logout</button>
             <span>{user.name}</span>
