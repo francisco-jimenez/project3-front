@@ -24,7 +24,16 @@
   color: white;  
 }
 
-
+.intro{
+  background-color: #324B71; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: sienna;
+  font-size: 16px;
+  margin-top: 15rem;
+}
 .App-link {
   color: #61dafb;
 }
