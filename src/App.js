@@ -20,6 +20,8 @@ function App() {
 			<Routes>
 				<Route exact path="/" element={<HomePage />} />
 				<Route exact path="/tinder" element={<Tinder />} />
+				<Route exact path="/tinder/:filterByType" element={<Tinder />} />
+
 				<Route
 					exact
 					path="/projects"

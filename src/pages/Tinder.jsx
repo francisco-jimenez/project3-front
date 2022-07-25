@@ -3,6 +3,7 @@ import Food from './Food'
 import { useState,useEffect } from "react"
 import service from '../services/service';
 import logo from "../MatchEatLogo.png";
+import { Routes, Route, useParams } from 'react-router-dom';
 
 
 
@@ -10,11 +11,18 @@ import logo from "../MatchEatLogo.png";
 
 function Tinder (){
   const [foodList,setFoodList]= useState([]);
-
+  const { filterByType } = useParams();
+  
   
   useEffect(()=>{
-    service.get(`/projects`)
-    .then(res=>{setFoodList(res.data)})
+    if(filterByType === undefined){
+      service.get("/projects")
+      .then(res=>{setFoodList(res.data)})
+    }else{
+      service.get(`/tinder/${filterByType}`)
+      .then(res=>{setFoodList(res.data)})
+    }
+    
   },[]);
 
   const onSwipe = (direction, food) => {
@@ -45,6 +53,7 @@ function Tinder (){
   
       return (
         <div>
+          <h2>Now showing post {filterByType}</h2>
           <div>
             <img style={{width:"400px"}} src={logo} alt="#" />
           </div>
