@@ -13,11 +13,17 @@ function Favorites(){
     }, [])
 
     function deleteFavorite(favoriteId) {
-        const filteredfavorites = favorites.filter((favorite) => {
-         return favorite._id !== favoriteId;
-            });
-            
-        setFavorites(filteredfavorites);
+        service.delete(`/favorites/${favoriteId}`)
+        .then((res) => {
+            const filteredfavorites = favorites.filter((favorite) => {
+             return favorite._id !== favoriteId;
+                });
+                
+            setFavorites(filteredfavorites);
+            console.log(favoriteId)
+           
+        })
+        .catch((err) => console.log(err))
     };
 
 
@@ -34,7 +40,7 @@ return(
              <a target="_blank" href={favorite.link}>{favorite.restaurant}</a>
              <br></br>
              <button onClick={() => deleteFavorite(favorite._id)} className="btn btn-danger">
-            Delete <span style= {{color: "black"}}>🗑️</span>
+            Delete <span style= {{color: "black"}}></span>
                 </button>
 
              </div>
