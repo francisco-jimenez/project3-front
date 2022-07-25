@@ -20,7 +20,7 @@ return(
         
             <div key={_id}>
             <h3>{name}</h3>
-            <Link to={`/food/${_id}`} > <img height='100px' src={image}/> </Link>
+             <img height='100px' src={image}/> 
             <h4>{type}</h4>
             <a target="_blank" href={link}>{restaurant}</a>
 
