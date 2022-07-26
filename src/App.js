@@ -10,7 +10,8 @@ import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
 import Favorites from './pages/Favorites';
-import Tinder from './pages/Tinder'
+import Tinder from './pages/Tinder';
+
 
 function App() {
 	return (
@@ -61,6 +62,7 @@ function App() {
 					}
 				/>
 			</Routes>
+			
 		</div>
 	);
 }
