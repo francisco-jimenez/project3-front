@@ -10,7 +10,7 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <div class="navbar">
+    <div class="navbar" style={{margin:"0", padding: "0"}}>
     <nav >
     <Link to="/">
     <img style={{width:"14rem"}} src={logo} alt="#" />
