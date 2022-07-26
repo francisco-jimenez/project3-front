@@ -39,6 +39,10 @@ return(
              <h4>{favorite.type}</h4>
              <a target="_blank" href={favorite.link}>{favorite.restaurant}</a>
              <br></br>
+             
+             <iframe  width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src={favorite.ubicacionLink}></iframe><br/><small><a href={favorite.href}>Ver mapa más grande</a></small>
+             
+             <br></br>
              <button onClick={() => deleteFavorite(favorite._id)} className="btn btn-danger">
             Delete <span style= {{color: "black"}}></span>
                 </button>
