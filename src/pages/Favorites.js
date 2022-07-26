@@ -1,5 +1,6 @@
 import service from "../services/service"
 import {useEffect, useState} from 'react'
+import AddReview from "../components/AddReview"
 
 function Favorites(){
 
@@ -51,7 +52,7 @@ return(
              <button onClick={() => deleteFavorite(favorite._id)} className="btn btn-danger">
             Delete <span style= {{color: "black"}}></span>
                 </button>
-
+             <AddReview foodId={favorite._id} />
              </div>
              
              )}
