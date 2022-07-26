@@ -7,9 +7,9 @@ import bgImage from ".././Foodporn.mp4"
 function HomePage() {
   return (
     <div className="container">
-      <video autoPlay loop muted>
+      {/* <video autoPlay loop muted>
 				<source src={bgImage} type="video/mp4" />
-			</video>
+			</video> */}
       <div>
       <Link to="/tinder">
         <button>¿No das match con tu media naranja? Hazlo con tu comida favorita!</button>
@@ -25,8 +25,9 @@ function HomePage() {
         <button>Una date</button>
       </Link>
       </div>
-     
+      <iframe  width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=2.1739384531974797%2C41.39027557248726%2C2.1773877739906315%2C41.39160163546612&amp;layer=mapnik"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/41.39094/2.17566">Ver mapa más grande</a></small>
     </div>
+
   );
 }
 
