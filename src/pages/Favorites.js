@@ -4,10 +4,14 @@ import {useEffect, useState} from 'react'
 function Favorites(){
 
     const [favorites, setFavorites] = useState([])
+    const [loading,setLoading] = useState(true)
+
     useEffect(() => {
         service.get("/favorites")
         .then((res) => {
             setFavorites(res.data.favorites)
+            console.log(res.data.favorites)
+            setLoading(false)
         })
         .catch((err) => console.log(err))
     }, [])
@@ -32,7 +36,8 @@ return(
     <div>
            
         <h1>Favoritess:</h1>
-        {favorites.map((favorite) => 
+        {!loading ? favorites.map((favorite) => {
+        return(
              <div key={favorite._id}>
              <h3>{favorite.name}</h3>
              <img height='100px' src={favorite.image}/> 
@@ -49,7 +54,8 @@ return(
 
              </div>
              
-        )}
+             )}
+             ): <h1>loading</h1>}
             
     
 
