@@ -63,3 +63,17 @@
   object-fit: cover;
 }
 
+.logo {
+  margin-left: 25px;
+}
+
+.button-login {
+  margin-right: 25px;
+}
+
+h1 {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 25px 0;
+}
+
