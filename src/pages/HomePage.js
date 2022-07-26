@@ -6,10 +6,11 @@ import bgImage from ".././Foodporn.mp4"
 
 function HomePage() {
   return (
-    <div>
+    <div className="container">
       <video autoPlay loop muted>
 				<source src={bgImage} type="video/mp4" />
 			</video>
+      <div>
       <Link to="/tinder">
         <button>¿No das match con tu media naranja? Hazlo con tu comida favorita!</button>
       </Link>
@@ -23,6 +24,8 @@ function HomePage() {
       <Link to="/tinder/3">
         <button>Una date</button>
       </Link>
+      </div>
+     
     </div>
   );
 }
