@@ -14,7 +14,7 @@ function HomePage() {
       <Link to="/tinder">
         <button>¿No das match con tu media naranja? Hazlo con tu comida favorita!</button>
       </Link>
-      <h1>¿Que plan tienes hoy?</h1>
+      <h1 className="title-home">¿Que plan tienes hoy?</h1>
       <Link to="/tinder/1">
         <button>Netflix and Chill</button>
       </Link>
