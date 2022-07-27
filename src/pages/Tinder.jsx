@@ -54,7 +54,7 @@ function Tinder (){
       return (
         <div>
         
-          <div >
+          <div style={{height:"470px",overflow: "hidden", width:"fit-content", margin:"auto"}}>
            
            {foodList.map((food) => (
            <TinderCard onSwipe= {(direction) => onSwipe(direction, food) } preventSwipe={['down']}>
