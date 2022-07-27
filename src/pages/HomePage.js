@@ -22,13 +22,13 @@ function HomePage() {
         ? (<>
 
       <Link to="/tinder/1">
-        <button onClick={logOutUser}>Netflix and Chill</button>
+        <button>Netflix and Chill</button>
       </Link>
       <Link to="/tinder/2">
-        <button onClick={logOutUser}>Con los amiguetes</button>
+        <button>Con los amiguetes</button>
       </Link>
       <Link to="/tinder/3">
-        <button onClick={logOutUser}>Una date</button>
+        <button>Una date</button>
       </Link>
       
       </>)
