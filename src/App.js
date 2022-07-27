@@ -17,7 +17,10 @@ import ReviewCard from './components/ReviewCard'
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
+		
+		    <Navbar />
+		
+			
 
 			<Routes>
 				<Route exact path="/" element={<HomePage />} />

@@ -25,6 +25,7 @@ function AllReviews(props){
                         
                     <h1>{review.title}</h1>
                     <h2>{review.rating}</h2>
+                    <h3>{review.review}</h3>
                     
                         </>
                                     )
