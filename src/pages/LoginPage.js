@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './../context/auth.context';
 import { loginService } from '../services/auth.services';
 import bgImage from ".././Foodporn.mp4";
+import userLogo from ".././user.png";
+import keyLogo from ".././key_01.png";
 
 function LoginPage(props) {
 	const [ email, setEmail ] = useState('');
@@ -42,12 +44,12 @@ function LoginPage(props) {
 				<form className="form-horizontal" onSubmit={handleLoginSubmit}>
 						<h3 class="title">User Login</h3>
 						<div class="form-group">
-							<span class="input-icon"><i class="fa fa-user"></i></span>
-							<input class="form-control" type="text" name="email" value={email} onChange={handleEmail} placeholder="Email" />
+							<span class="input-icon"><img src={userLogo} style={{width:"25px"}} /></span>
+							<input class="form-control" type="text" name="email" value={email} onChange={handleEmail} />
 						</div>
 						<div class="form-group">
-							<span class="input-icon"><i class="fa fa-lock"></i></span>
-							<input class="form-control" type="password" name="password" value={password} onChange={handlePassword} placeholder="Password" />
+							<span class="input-icon"><img src={keyLogo} style={{width:"25px"}} /></span>
+							<input class="form-control" type="password" name="password" value={password} onChange={handlePassword} />
 						</div>
 						<span class="forgot-pass"></span>
 						<button class="btn signin">Login</button>

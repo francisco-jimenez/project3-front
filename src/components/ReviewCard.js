@@ -1,17 +1,34 @@
 import {useEffect, useState} from 'react'
 import service from '../services/service'
-function AllReviews(){
+import {useParams} from "react-router-dom"
+function AllReviews(props){
+    const {foodId} = useParams()
     const [allReviews, setAllReviews] = useState([])
     useEffect(() => {
-        service.get("/reviews")
+        service.get(`/review/${foodId}`)
         .then((res) => {
-            setAllReviews(res.data.reviews)
+            console.log(res.data[0])
+            if(res.data[0].review !== undefined){
+                setAllReviews(res.data[0].review)
+            }
         })
         .catch((err) => console.log(err))
     }, [])
 
     return(
-        <h1>ey</h1>
+        <div>
+            {
+                allReviews.map((review) => {
+                    return(
+                        <>
+                    <h1>{review.title}</h1>
+                    <h2>{review.rating}</h2>
+                        </>
+                                        )
+                })
+            }
+        </div>
+    
     )
 }
 export default AllReviews
