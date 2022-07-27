@@ -1,6 +1,7 @@
 import service from "../services/service"
 import {useEffect, useState} from 'react'
 import AddReview from "../components/AddReview"
+import ReviewCard from "../components/ReviewCard"
 
 function Favorites(){
 
@@ -53,6 +54,7 @@ return(
             Delete <span style= {{color: "black"}}></span>
                 </button>
              <AddReview foodId={favorite._id} />
+             <ReviewCard foodId={favorite._id} />
              </div>
              
              )}
