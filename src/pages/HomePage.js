@@ -2,7 +2,7 @@ import logo from "../MatchEatLogo.png";
 import background from "../allyouneed.png"
 import patata from "../patata.jpg"
 import { Link } from "react-router-dom";
-import bgImage from ".././Foodporn.mp4"
+import bgImage from ".././Foodporn.mp4";
 
 function HomePage() {
   return (
