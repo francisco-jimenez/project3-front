@@ -1,14 +1,14 @@
-import logo from "../MatchEatLogo.png";
-import background from "../allyouneed.png"
-import patata from "../patata.jpg"
+
+
+
 import { Link } from "react-router-dom";
 import bgImage from ".././Foodporn.mp4";
-import {useEffect, useState} from 'react'
+
 import { AuthContext } from "./../context/auth.context";
 import { useContext } from "react";
 
 function HomePage() {
-  const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
   return (
     <div className="container">
       <video autoPlay loop muted>
@@ -16,7 +16,9 @@ function HomePage() {
 			</video>
       <div>
      
-      <h1 className="title-home">¿Que plan tienes hoy?</h1>
+      <h1 class="line-1 anim-typewriter">¿No haces match con tu media naranja?<br /> Pues hazlo con la comida!</h1>
+      <Link to="/signup"> <button>Signup</button> </Link>
+          <Link class="button-login" to="/login"> <button>Login</button> </Link>
 
       {isLoggedIn
         ? (<>
