@@ -53,11 +53,8 @@ function Tinder (){
   
       return (
         <div>
-          <h2>Now showing post {filterByType}</h2>
-          <div>
-            <img style={{width:"400px"}} src={logo} alt="#" />
-          </div>
-          <div style={{border: "3px black solid", width: "40%", margin: "auto", overflow: "hidden", height: "270px"}}>
+        
+          <div style={{height:"470px",overflow: "hidden", width:"fit-content", margin:"auto"}}>
            
            {foodList.map((food) => (
            <TinderCard onSwipe= {(direction) => onSwipe(direction, food) } preventSwipe={['down']}>
