@@ -37,7 +37,7 @@ function Favorites(){
 return(
     <div>
            
-        <h1>Favoritess:</h1>
+        <h1>Favorites:</h1>
         {!loading ? favorites.map((favorite) => {
         return(
              <div key={favorite._id}>
