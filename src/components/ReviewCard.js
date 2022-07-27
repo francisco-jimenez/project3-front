@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import service from '../services/service'
 import {useParams} from "react-router-dom"
+import AddReview from './AddReview'
 function AllReviews(props){
     const {foodId} = useParams()
     const [allReviews, setAllReviews] = useState([])
@@ -21,12 +22,15 @@ function AllReviews(props){
                 allReviews.map((review) => {
                     return(
                         <>
+                        
                     <h1>{review.title}</h1>
                     <h2>{review.rating}</h2>
+                    
                         </>
-                                        )
+                                    )
                 })
             }
+              <AddReview foodId={foodId} /> 
         </div>
     
     )
