@@ -26,7 +26,7 @@ function Navbar() {
             <Link to="/favorites">
               <button class="btn btn-white btn-animation-1" style={{marginRight:"10px"}}>Tus Match</button>
             </Link>
-            <button class="btn btn-white btn-animation-1" onClick={logOutUser} style={{marginRight:"10px"}}>Logout</button>
+            <Link to="/"><button class="btn btn-white btn-animation-1" onClick={logOutUser} style={{marginRight:"10px"}}>Logout</button></Link>
             <span style={{marginRight:"25px", color:"#ffffff"}}>{user.name}</span>
             </div>
           </>)
