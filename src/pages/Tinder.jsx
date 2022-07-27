@@ -2,7 +2,7 @@ import TinderCard from 'react-tinder-card'
 import Food from './Food'
 import { useState,useEffect } from "react"
 import service from '../services/service';
-import logo from "../MatchEatLogo.png";
+
 import { Routes, Route, useParams } from 'react-router-dom';
 
 

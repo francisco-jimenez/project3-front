@@ -10,7 +10,7 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <div class="navbar" style={{margin:"0", padding: "0", backgroundColor: "#F18383"}}>
+    <div class="navbar" style={{margin:"0", padding: "0"}}>
     <nav >
     <Link to="/">
     <img class="logo" style={{width:"14rem"}} src={logo} alt="#" />
@@ -21,13 +21,13 @@ function Navbar() {
         ? (<>
         <div class="nav.links">
             <Link to="/tinder">
-              <button>Haz swipe!</button>
+              <button class="btn btn-white btn-animation-1" style={{marginRight:"10px"}}>Haz swipe!</button>
             </Link>
             <Link to="/favorites">
-              <button>Tus Match</button>
+              <button class="btn btn-white btn-animation-1" style={{marginRight:"10px"}}>Tus Match</button>
             </Link>
-            <button onClick={logOutUser}>Logout</button>
-            <span>{user.name}</span>
+            <button class="btn btn-white btn-animation-1" onClick={logOutUser} style={{marginRight:"10px"}}>Logout</button>
+            <span style={{marginRight:"25px", color:"#ffffff"}}>{user.name}</span>
             </div>
           </>)
         : 

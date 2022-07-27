@@ -15,22 +15,23 @@ function HomePage() {
 				<source src={bgImage} type="video/mp4" />
 			</video>
       <div>
-     
+      <div class="box">
       <h1 class="line-1 anim-typewriter">¿No haces match con tu media naranja?<br /> Pues hazlo con la comida!</h1>
-      <Link to="/signup"> <button>Signup</button> </Link>
-          <Link class="button-login" to="/login"> <button>Login</button> </Link>
-
-      {isLoggedIn
+          
+          <Link to="/signup"> <button class="btn btn-white btn-animation-1">Signup</button> </Link>
+          <Link class="button-login" to="/login"> <button class="btn btn-white btn-animation-1">Login</button> </Link>
+          
+          {isLoggedIn
         ? (<>
 
       <Link to="/tinder/1">
-        <button>Netflix and Chill</button>
+        <button class="btn btn-white btn-animation-1">Netflix and Chill</button>
       </Link>
       <Link to="/tinder/2">
-        <button>Con los amiguetes</button>
+        <button class="btn btn-white btn-animation-1">Con los amiguetes</button>
       </Link>
       <Link to="/tinder/3">
-        <button>Una date</button>
+        <button class="btn btn-white btn-animation-1">Con Una date</button>
       </Link>
       
       </>)
@@ -38,6 +39,11 @@ function HomePage() {
       (<>
         </>)
       }
+      </div>
+      
+      
+
+     
 
 
 
