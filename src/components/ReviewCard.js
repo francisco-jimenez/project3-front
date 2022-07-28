@@ -17,15 +17,15 @@ function AllReviews(props){
     }, [])
 
     return(
-        <div>
+        <div  className="tweet">
             {
                 allReviews.map((review) => {
                     return(
                         <>
                         
                     <h1>{review.title}</h1>
-                    <h2>{review.rating}</h2>
-                    <h3>{review.review}</h3>
+                    <h2 className="message">{review.rating}</h2>
+                    <h3  className="user">{review.review}</h3>
                     
                         </>
                                     )

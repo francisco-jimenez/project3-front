@@ -1,6 +1,3 @@
-
-
-
 import { Link } from "react-router-dom";
 import bgImage from ".././Foodporn.mp4";
 
