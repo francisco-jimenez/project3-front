@@ -4,6 +4,10 @@ import { Link } from "react-router-dom"
 
 import TinderCard from 'react-tinder-card'
 
+import flechas from "../flechas.png"
+
+
+
 
 
 function Food({
@@ -16,22 +20,23 @@ function Food({
 return(
     
 
-      <div key={_id} id="containerdos">	
-      
-	
-	<h3>{name}</h3>
-
-	
+      <div>	
+      <h1>hola</h1>
+      <div key={_id} id="containerdos">
 <div class="foodimage">
 	
-	<img  src={image} alt="" height="250px"/>
+	<img  src={image} alt="" height="350px" width="350px"/>
 	
 </div>
-<div class="tinder--buttons">
+
+	<h4 style={{marginTop:"25px", fontSize:"20px"}}>{name}</h4>
+
+  <img src={flechas} alt=""/>
+
+
 <br/>
-    <button id="nope">nope</button>
-    <button id="love">love</button>
-  </div>
+ 
+</div>
 </div>
      
       
