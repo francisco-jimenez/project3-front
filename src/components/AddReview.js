@@ -43,6 +43,7 @@ function AddReview(props) {
 				<input
 				type="number"
 				max="5"
+				min="0"
 				name="rating"
 				onChange={(e) => setRating(e.target.value)}
 				/>
