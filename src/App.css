@@ -421,4 +421,35 @@ body {
 
   }
   
- 
+ /* prueba css tinder card */
+
+ #containerdos{
+  box-shadow: 0 15px 30px 1px grey;
+  background: rgba(255, 255, 255, 0.90);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5em auto;
+  height: 650px;
+  width: 350px; 
+  
+}
+
+#nope{
+  border-radius: 50%;
+  line-height: 60px;
+  width: 60px;
+  border: 0;
+  background:  grey;;
+  display: inline-block;
+  margin: 0 8px;
+}
+#love{
+  border-radius: 50%;
+  line-height: 60px;
+  width: 60px;
+  border: 0;
+  background:  grey;;
+  display: inline-block;
+  margin: 0 8px;
+}
