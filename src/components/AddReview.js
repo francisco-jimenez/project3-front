@@ -39,9 +39,10 @@ function AddReview(props) {
 			))} */}
 
 			<form onSubmit={handleFormComments}>
-				<label>Rating:</label>
+				<label>Rating:</label>	
 				<input
 				type="number"
+				max="5"
 				name="rating"
 				onChange={(e) => setRating(e.target.value)}
 				/>

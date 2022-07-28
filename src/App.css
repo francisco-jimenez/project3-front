@@ -320,5 +320,9 @@ body {
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }
+
+  .review {
+    margin-bottom: 3%;
+  }
   
  
