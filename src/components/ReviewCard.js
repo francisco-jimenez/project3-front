@@ -17,22 +17,25 @@ function AllReviews(props){
     }, [])
 
     return(
-        <div  className="tweet">
+        <>
+            <div >
             {
-                allReviews.map((review) => {
+                allReviews.map((review, index) => {
                     return(
-                        <>
-                        
-                    <h1>{review.title}</h1>
-                    <h2 className="message">{review.rating}</h2>
-                    <h3  className="user">{review.review}</h3>
-                    
-                        </>
-                                    )
+                        <div className='review'>
+                            <h1>Comment #{index+1}</h1>
+                            <h1>Title: {review.title}</h1>
+                            <h2>Rating: {"⭐".repeat(review.rating)}</h2>
+                            <h3>Review: {review.review}</h3>
+                        </div>
+                    )
                 })
             }
-              <AddReview foodId={foodId} /> 
-        </div>
+              
+            </div>
+            <AddReview className="tweet" foodId={foodId} />
+        </>
+        
     
     )
 }
