@@ -84,7 +84,7 @@ body {
   background: #DFC2F2;
   display: flex;
   justify-content: center;
-    background-image: linear-gradient( to right, #ffffb3,#ffe6e6);
+    background-image: linear-gradient( to right, #cc00006b,#cc000036,#66cc004b,#66cc009a);
     background-attachment: fixed;	
     background-size: cover;
     
@@ -430,7 +430,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   margin: 5em;
-  height: 450px;
+  height: 470px;
   width: 350px; 
   margin-bottom:150px;
   
@@ -453,4 +453,19 @@ body {
   background:  grey;;
   display: inline-block;
   margin: 0 8px;
+}
+
+
+#check{
+  width: 35px;
+}
+
+#close{
+  width: 25px;
+}
+#arrowright{
+  width: 25px;
+}
+#arrowleft{
+  width: 25px;
 }
