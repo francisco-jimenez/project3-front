@@ -52,7 +52,7 @@ function Favorites() {
 <div class="control">
 	
 <Link to={"/review/"+favorite._id}>
-                <button>See reviews</button>
+                <button className="btn btn-danger">See reviews</button>
               </Link>
   <br/>
   <br/>
