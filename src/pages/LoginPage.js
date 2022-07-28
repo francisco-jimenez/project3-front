@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 // import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './../context/auth.context';
 import { loginService } from '../services/auth.services';
 import bgImage from ".././Foodporn.mp4";
@@ -26,7 +26,7 @@ function LoginPage(props) {
 			
 			const token = response.data.authToken;
 			logInUser(token);
-			navigate('/');
+			navigate('/Filtro');
 		} catch (err) {
 			const errorDescription = err?.response?.data?.message;
 			setErrorMessage(errorDescription);

@@ -13,7 +13,7 @@ function Navbar() {
     <div class="navbar" style={{margin:"0", padding: "0"}}>
     <nav >
     <Link to="/">
-    <img class="logo" style={{width:"14rem"}} src={logo} alt="#" />
+    <img onClick={logOutUser} class="logo" style={{width:"14rem"}} src={logo} alt="#" />
     </Link>
   
 

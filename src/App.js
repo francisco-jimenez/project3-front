@@ -12,6 +12,7 @@ import AnonRoute from './components/AnonRoute';
 import Favorites from './pages/Favorites';
 import Tinder from './pages/Tinder';
 import ReviewCard from './components/ReviewCard'
+import FilterPage from './pages/Filtro';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
 			<Routes>
 				<Route exact path="/" element={<HomePage />} />
+				<Route exact path="/filtro" element={<FilterPage />} />
 				<Route exact path="/tinder" element={<Tinder />} />
 				<Route exact path="/review/:foodId" element={<ReviewCard />} />
 				<Route exact path="/tinder/:filterByType" element={<Tinder />} />
