@@ -15,7 +15,7 @@ function HomePage() {
       <div class="box">
       <h1 class="line-1 anim-typewriter">¿No haces match con tu media naranja?<br /> Pues hazlo con la comida!</h1>
           
-          <Link to="/signup"> <button class="btn btn-white btn-animation-1">Signup</button> </Link>
+          <Link to="/signup"> <button class="btn btn-white btn-animation-1" style={{marginRight:"15px"}}>Signup</button> </Link>
           <Link class="button-login" to="/login"> <button class="btn btn-white btn-animation-1">Login</button> </Link>
           
           {isLoggedIn
