@@ -33,7 +33,7 @@ textarea {
 nav {
   background-color: transparent !important;
   width: 1530px;
-  margin: none;
+  margin: 0;
   padding: 10px 0;
   display: flex;
   align-items: center;
@@ -118,8 +118,6 @@ nav li {
   padding-top: -30;
   font-size: 1.7rem;
   color: #502435;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* css Login Page */
@@ -243,7 +241,7 @@ nav li {
     position: relative;
     top: 50%;  
     width: 24em;
-    margin: 300px auto 0;
+    margin: 200px auto 0;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 50px;
     text-align: center;
