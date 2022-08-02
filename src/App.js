@@ -9,14 +9,27 @@ import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoute'; 
 import AnonRoute from './components/AnonRoute'; 
+import Favorites from './pages/Favorites';
+import Tinder from './pages/Tinder';
+import ReviewCard from './components/ReviewCard'
+import FilterPage from './pages/Filtro';
+
 
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
+		
+		    <Navbar />
+		
+			
 
 			<Routes>
-				<Route exact path="/" component={HomePage} />
+				<Route exact path="/" element={<HomePage />} />
+				<Route exact path="/filtro" element={<FilterPage />} />
+				<Route exact path="/tinder" element={<Tinder />} />
+				<Route exact path="/review/:foodId" element={<ReviewCard />} />
+				<Route exact path="/tinder/:filterByType" element={<Tinder />} />
+
 				<Route
 					exact
 					path="/projects"
@@ -26,7 +39,7 @@ function App() {
 						</PrivateRoute>
 					}
 				/>
-
+				<Route path="/favorites" element={ <Favorites />} />
 				<Route
 					exact
 					path="/projects/:id"
@@ -56,6 +69,7 @@ function App() {
 					}
 				/>
 			</Routes>
+			
 		</div>
 	);
 }

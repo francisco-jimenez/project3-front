@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react';
 import { getProjectDetailsService } from '../services/project.services';
 
 import { Link, useParams } from 'react-router-dom';
-import AddTask from '../components/AddTask';
+import AddReview from '../components/AddReview';
 import TaskCard from '../components/TaskCard';
 
 function ProjectDetailsPage(props) {
-	const [ project, setProject ] = useState(null);
+	const [ review, setProject ] = useState(null);
 	const { id } = useParams();
 	const projectId = id;
 
-	const getProject = async () => {
+	const getReview = async () => {
 		localStorage.getItem('authToken');
 		try {
 			const response = await getProjectDetailsService(id);
@@ -21,23 +21,23 @@ function ProjectDetailsPage(props) {
 	};
 
 	useEffect(() => {
-		getProject();
+		getReview();
 		// eslint-disable-next-line
 	}, []);
 
 	return (
 		<div className="ProjectDetails">
-			{project && (
+			{review && (
 				<div>
-					<h1>Project: {project.title}</h1>
-					<p>Description: {project.description}</p>
+					<h1>Project: {review.title}</h1>
+					<p>Description: {review.description}</p>
 				</div>
 			)}
 
-			<AddTask refreshProject={getProject} projectId={projectId} />
+			<AddReview refreshReview={getReview} reviewId={projectId} />
 
-			{project &&
-				project.tasks.map((task) => {
+			{review &&
+				review.tasks.map((task) => {
 					return <TaskCard key={task._id} {...task} />;
 				})}
 
